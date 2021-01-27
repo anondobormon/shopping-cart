@@ -17,6 +17,10 @@ plusSign.addEventListener("click", function(){
     document.getElementById("totalTaka").innerText = mainTotal;
     
     updateTotalCost("totalAmount", totalMobile);
+
+
+    
+    document.getElementById("taxAmount").innerText = mainTotal * 0.01;
 })
 
 
@@ -40,11 +44,9 @@ minusSign.addEventListener("click", function(){
     const mainTotal = total - 1219;
     document.getElementById("totalTaka").innerText = mainTotal;
     updateTotalCost("totalAmount", totalMobile);
+
+    document.getElementById("taxAmount").innerText = mainTotal * 0.01;
 })
-
-
-
-
 
 // totalcost***********
 
@@ -53,10 +55,6 @@ function updateTotalCost(id, totalMobile){
     // console.log(totalCost);
     document.getElementById(id).innerText = totalCost;
 
-    // const subTotal = document.getElementById("totalTaka").innerText;
-    // const total = parseFloat(subTotal);
-    // const mainTotal = total + 1219;
-    // document.getElementById("totalTaka").innerText = mainTotal;
 }
 
 
@@ -82,6 +80,7 @@ casingPlusSign.addEventListener("click", function(){
     document.getElementById("totalTaka").innerText = mainTotal;
 
     casingTotalCost("casingAmount", totalMobile);
+    document.getElementById("taxAmount").innerText = mainTotal * 0.01;
 })
 
 const casingMinusSign = document.getElementById("minusButton");
@@ -100,6 +99,7 @@ casingMinusSign.addEventListener("click", function(){
     const mainTotal = total - 59;
     document.getElementById("totalTaka").innerText = mainTotal;
     casingTotalCost("casingAmount", totalMobile);
+    document.getElementById("taxAmount").innerText = mainTotal * 0.01;
 })
 
 
@@ -109,19 +109,8 @@ function casingTotalCost(id, totalMobile){
     // console.log(totalCost);
     document.getElementById(id).innerText = totalCosting;
 
-    // const subTotal = document.getElementById("totalTaka").innerText;
-    // const total = parseFloat(subTotal);
-    // const mainTotal = total + 59;
-    // document.getElementById("totalTaka").innerText = mainTotal;
-
-
- 
 }
 
 
-// const totalTaka = document.getElementsByClassName("totalTaka").innerText;
-// const totalMoney = parseFloat(totalTaka);
-// const total = totalCost + totalCosting;
-// document.getElementById("totalTaka").innerText = total;
 
 
